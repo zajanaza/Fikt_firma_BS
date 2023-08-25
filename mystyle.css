@@ -17,3 +17,12 @@
   text-shadow:none;
   font-weight:normal;
 }
+.titles{      
+  font-weight: bold;
+  text-shadow: 5px 5px 5px black;
+  background-color:rgba(0, 0, 0, 0.5);
+  border-radius: 8px; 
+  height: 60px;   
+}
+
+}

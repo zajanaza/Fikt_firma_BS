@@ -5,24 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zadrazilova</title>
+  <link href="https://unpkg.com/@popperjs/core@2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100;0,200;0,500;0,800;1,100&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="mystyle.css">
-  <script src="https://kit.fontawesome.com/896552d01b.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/896552d01b.js" crossorigin="anonymous"></script>  
 </head>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <!-- JS pro modal -->
   <script>  
     var exampleModal = document.getElementById('exampleModal');
     var iframe = exampleModal.querySelector('iframe');
-    var videoSrc = iframe.src;
-  
+    var videoSrc = iframe.src;  
     exampleModal.addEventListener('hide.bs.modal', function () {
       iframe.src = "";
-    });
-  
+    });  
     exampleModal.addEventListener('show.bs.modal', function () {
       iframe.src = videoSrc;
     });
+  </script>
+  <!-- JS pro tooltip -->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
   </script>
   <!-- Home -->
   <section id="Home">
@@ -37,16 +43,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto ms-auto fs-5">
             <li class="nav-item">
-              <a class="nav-link text-body" aria-current="page" href="#o mne" onclick="closeNavbar()">O nás</a>
+              <a class="nav-link text-body" aria-current="page" href="#Kdo jsme" onclick="closeNavbar()">Kdo jsme</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-body" href="#dovednosti" onclick="closeNavbar()">Co děláme</a>
+              <a class="nav-link text-body" href="#Co delame" onclick="closeNavbar()">Co děláme</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-body" href="#projekty" onclick="closeNavbar()">Ceník</a>
+              <a class="nav-link text-body" href="#Cenik" onclick="closeNavbar()">Ceník</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-body" href="#zajmy" onclick="closeNavbar()">Kontakt</a>
+              <a class="nav-link text-body" href="#Kontakt" onclick="closeNavbar()">Kontakt</a>
             </li>                      
           </ul>
         </div>
@@ -86,8 +92,182 @@
       </div>      
     </div>
   </section>
-  <section>
-    
-  </section>  
+  <!-- O firmě -->
+  <section id="Kdo jsme">
+    <div class="container pt-5">
+      <h3>Kdo jsme</h3>
+      <div class="row">
+        <div class="col-8">
+          <div id="carouselExampleCaptions" class="carousel slide w-75">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="add/foto/christopher-burns-Pl0s3qM0A_w-unsplash.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-lg-block titles">
+                  <h5>Smysl pro detail</h5>                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="add/foto/gijs-coolen-Ka2rq2tQgzY-unsplash.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-lg-block titles">
+                  <h5>Custom design</h5>                 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="add/foto/spencer-davis-XV1u2rui_7E-unsplash.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-lg-block titles">
+                  <h5>Free ride</h5>                  
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-4">
+          <p><p style="font-family: Caprasimo" class="muted"><a href="#"
+            data-bs-toggle="tooltip" data-bs-title="Default tooltip">Lorem ipsum dolor</a></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, adipisci? Corporis unde velit omnis facere odio illo, sed possimus necessitatibus repellat eveniet provident earum perspiciatis ab rem quisquam labore quas quasi quae ullam eius facilis molestias numquam? Neque nesciunt adipisci iusto dicta? Eaque error id, velit earum consequuntur voluptatem maxime fugit distinctio placeat iusto adipisci iure quisquam, culpa exercitationem incidunt nisi quos molestias, aspernatur ab. Animi est ea placeat neque error labore saepe, fugiat suscipit temporibus. Ducimus aliquam nesciunt esse dignissimos. Consectetur nam consequuntur fuga libero repellat exercitationem ab ipsa maxime. Quaerat, magnam. Nostrum ad distinctio in maiores est unde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Činnost firmy -->
+  <section id="Co delame">
+    <div class="container pt-5">
+      <h3>Co děláme</h3>
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 d-flex flex-column align-items-center my-1" style="border:solid 1px; border-color:#a6460F">
+          <img src="add/foto/servis/soroush-golpoor-cZOUohcMe94-unsplash.jpg" alt="" width="350" class="d-none d-md-block">
+          <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rem voluptatibus maxime dignissimos doloremque animi maiores. Tempore voluptatibus natus aspernatur.</p>
+        </div>
+        <div class="col-lg-4 col-sm-12 d-flex flex-column align-items-center my-1" style="border:solid 1px; border-color:#a6460F">
+          <img src="add/foto/servis/soroush-golpoor-N7qRkMMMKI4-unsplash.jpg" alt="" width="350" class="d-none d-md-block">
+          <p class="pt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quam blanditiis beatae, ipsa iusto obcaecati. Ipsa saepe quod eum explicabo!</p>
+        </div>
+        <div class="col-lg-4 col-sm-12 d-flex flex-column align-items-center my-1" style="border:solid 1px; border-color:#a6460F">
+          <img src="add/foto/servis/soroush-golpoor-qsVxyKB0f1k-unsplash.jpg" alt="" width="350" class="d-none d-md-block">
+          <p class="pt-1"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ea rem fugiat debitis atque, perspiciatis sed dolorum provident placeat eaque?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ceník -->
+  <section id="Cenik">
+    <div class="container pt-5">
+      <h3>Ceník</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Co nabízíme</th>
+            <th scope="col">Cena</th>
+            <th scope="col">Čas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Kompletní přestavba</td>
+            <td>80 000 CZK</td>
+            <td>30 dní</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Změna barvy</td>
+            <td>20 000 CZK</td>
+            <td>5 dní</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Montáž doplňků</td>
+            <td>800 CZK/hod</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- Kontakt -->
+  <section id="Kontakt">
+    <div class="container pt-5">
+      <h3>Kontakt</h3>
+      <div class="row pt-2">
+        <div class="col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-items-center">
+          <div>
+            <i class="fa-solid fa-address-card fa-2xl"></i>
+            <div>U lesa 29, Město 123 45, Země</div>  
+            <br />         
+          </div>
+          <div>
+            <i class="fa-solid fa-envelope fa-2xl"></i>
+            <div>email@domena.cz</div>
+            <br />             
+          </div>
+          <div>
+            <i class="fa-solid fa-phone-volume fa-2xl"></i>
+            <div>+111 222 333 444</div>   
+            <br />          
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-items-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998460.8502894329!2d-70.37340761403055!3d12.164214038066586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e831adc48ba4373%3A0x75f26cfbd6ede480!2sDelfins%20Beach%20Resort%20Bonaire!5e0!3m2!1scs!2ses!4v1689676944629!5m2!1scs!2ses" width= "400rem" height= "400rem" style="border-radius: 10px"; allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
+      </div>
+      <h3 pt-5>Pošlete nám poptávku</h3>
+      <form>
+        <div class="mb-3">
+          <label for="jmeno" class="form-label">Jméno a příjmení</label>
+          <input type="email" class="form-control" id="jmeno" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email*</label>
+          <input type="email" class="form-control" id="email" placeholder="email@email.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="predmet" class="form-label">Poptávka</label>
+          <input type="email" class="form-control" id="predmet" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="zprava" class="form-label">Text</label>
+          <textarea class="form-control mydisabled" id="zprava" rows="3" disabled>Zatím nepoužívat</textarea>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" type="submit" style="color:#A6460F; font-weight: bold">Odeslat</button>
+        </div>
+      </form>   
+      <hr />     
+    </div>       
+  </section>
+  <!-- JS pro Navburger -->
+  <script>
+    function closeNavbar() {
+      // Zavřít navigační menu po kliknutí na odkaz
+      var navCollapse = document.getElementById("navbarNav");
+
+      if (navCollapse.classList.contains("show")) {
+
+        navCollapse.classList.remove("show");
+
+      }
+
+    }
+  </script>     
 </body>
+<footer>
+  <div class="row px-5">
+    <div class="col-12 d-flex justify-content-end">
+      <p style="font-size:0.7rem">© Jana Zadražilová 2023</p>
+    </div>
+    
+  </div>
+</footer>
 </html>
